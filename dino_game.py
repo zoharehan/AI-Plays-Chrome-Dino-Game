@@ -110,8 +110,7 @@ class Bird:
                         (self.WIDTH, self.HEIGHT))]
         self.img = None
         self.allowed = False
-        self.passed = False # keep this
-        #the birds start to appear a long time after, hence large x val
+        self.passed = False 
         self.heights = [175,150,107,10,20]
         self.y = random.choice(self.heights)
         self.speed = 8
@@ -170,9 +169,6 @@ class Cactus:
             self.hitbox0 = pygame.Rect(self.x, self.y, self.width+5, self.height)
 
 
-
-
-        #TODO: figure out a way to allow a randomised bird x and y position and also to get widths of each specific hitbox
     def get_width(self):
         if self.cactus_choice == 1:
             return self.width
